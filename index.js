@@ -62,6 +62,7 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
+<<<<<<< HEAD
   var incart = false
   for (let i=0; i<cart.length; i++) {
     for (var key2 in cart[i]) {
@@ -75,6 +76,19 @@ function removeFromCart(item) {
         console.log(`That item is not in your cart.`);
       }
   return cart  
+=======
+  for (let i=0; i<cart.length; i++) {
+    for (var key2 in cart) {
+      if (cart[i].hasOwnProperty(item)) {
+        cart.splice(i, 1)
+      }
+      else {
+        console.log(`That item is not in your cart.`);
+      }
+      return cart
+    }
+  }
+>>>>>>> 5b69aaec9c45050ee63c5e35cce946e5a77d5b4d
 }
 
 function placeOrder(cardNumber) {
@@ -83,7 +97,11 @@ function placeOrder(cardNumber) {
     console.log(`Sorry, we don't have a credit card on file for you.`)
   }
   else {
+<<<<<<< HEAD
     console.log(`Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`);
+=======
+    console.log(`Your total cost is ${total()}, which will be charged to the card ${cardNumber}.`);
+>>>>>>> 5b69aaec9c45050ee63c5e35cce946e5a77d5b4d
     cart = []
     return cart
   }
